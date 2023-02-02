@@ -1,9 +1,11 @@
 # Jackworkschedule
-![Alt text]["/Assets/05-third-party-apis-homework-demo.gif]
+![Alt text]["/Assets/Screenshot 2023-02-02 152548.png"]
 
 ##### Table of Contents  
 [Description](#description)  
+
 [Deployed Site](#deployedsite)
+
 [Accceptance Criteria](#acceptancecriteria)
 
 ## Description
