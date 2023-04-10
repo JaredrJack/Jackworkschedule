@@ -3,7 +3,7 @@
 // in the html.
 // Display today's day and date
 // show today's date
-var today = moment().format("dddd, MMMM Do YYYY");
+var today = moment.js (). format("dddd,MMMMY,YYYY");
 console.log(today);
 var todayElement = document.getElementById('currentDay');
 todayElement.textContent = today;
