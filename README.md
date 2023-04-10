@@ -1,5 +1,5 @@
 # Jackworkschedule
-C:\Users\jared\Desktop\coding\homework\Jackworkschedule\Assets\05-third-party-apis-homework-demo.gif
+! [C:\Users\jared\Desktop\coding\homework\Jackworkschedule\Assets\05-third-party-apis-homework-demo.gif]
 
 ##### Table of Contents  
 [Description](#description)  
