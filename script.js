@@ -3,7 +3,7 @@
 // in the html.
 // Display today's day and date
 // show today's date
-var today = moment.js (). format("dddd,MMMMY,YYYY");
+var today = days.js (). format("dddd,MMMMY,YYYY");
 console.log(today);
 var todayElement = document.getElementById('currentDay');
 todayElement.textContent = today;
@@ -44,7 +44,7 @@ var saveEvents = function () {
 }
 
 // set timeblock color
-var currentHour = moment().format("H")
+var currentHour = days().format("H")
 console.log(currentHour);
 
 if (currentHour >= 10) {
