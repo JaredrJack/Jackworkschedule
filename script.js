@@ -3,7 +3,8 @@
 // in the html.
 // Display today's day and date
 // show today's date
-var today = days.js (). format("dddd,MMMMY,YYYY");
+var today = dayjs().format("dddd,MMMM Y,YYYY");
+
 console.log(today);
 var todayElement = document.getElementById('currentDay');
 todayElement.textContent = today;
@@ -24,27 +25,36 @@ var loadEvents = function () {
         console.log(eventTime);
         console.log(eventText);
         var eventBlock = document.getElementById(eventTime);
-        eventBlock.innerHTML = eventText;
+        if (eventBlock) {
+            eventBlock.innerHTML = eventText;
+        } else {
+            console.log("Could not find element with ID " + eventTime);
+        }
+
     }
 }
 
 $(".time-block").on("click", "button", function () {
     var currentText = $(this).siblings("textarea").val().trim();
-    var timeBlock = $(this).siblings("textarea").attr("id");
-    events.push({
-        text: currentText,
-        time: timeBlock
-    })
-    console.log(events);
-    saveEvents();
+    console.log(currentText);
+    var timeBlock = $(this).parent().attr("id");
+    console.log(timeBlock);
+ localStorage.setItem(timeBlock,currentText);
 });
 
-var saveEvents = function () {
-    localStorage.setItem("events", JSON.stringify(events));
-}
+$("#9-hour .description").val(localStorage.getItem("9-hour"))
+$("#10-hour .description").val(localStorage.getItem("10-hour"))
+$("#11-hour .description").val(localStorage.getItem("11-hour"))
+$("#12-hour .description").val(localStorage.getItem("12-hour"))
+$("#1-hour .description").val(localStorage.getItem("1-hour"))
+$("#2-hour .description").val(localStorage.getItem("2-hour"))
+$("#3-hour .description").val(localStorage.getItem("3-hour"))
+$("#4-hour .description").val(localStorage.getItem("4-hour"))
+$("#5-hour .description").val(localStorage.getItem("5-hour"))
+
 
 // set timeblock color
-var currentHour = days().format("H")
+var currentHour = dayjs().format("H")
 console.log(currentHour);
 
 if (currentHour >= 10) {
